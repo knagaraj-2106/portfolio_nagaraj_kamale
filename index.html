@@ -3011,23 +3011,6 @@
             update();
         }
 
-        // ===== 3D TILT =====
-        function addTilt(selector, intensity) {
-            document.querySelectorAll(selector).forEach(card => {
-                card.addEventListener('mousemove', (e) => {
-                    const r = card.getBoundingClientRect();
-                    const x = (e.clientX - r.left - r.width/2) / intensity;
-                    const y = (e.clientY - r.top - r.height/2) / intensity;
-                    card.style.transform = `perspective(1000px) rotateX(${-y}deg) rotateY(${x}deg) translateY(-8px)`;
-                });
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = '';
-                });
-            });
-        }
-        addTilt('.skill-card', 15);
-        addTilt('.project-card', 20);
-
         // ===== ABOUT IMAGE 3D =====
         const aboutImg = document.querySelector('.about-image');
         if (aboutImg) {
