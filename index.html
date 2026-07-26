@@ -2390,18 +2390,6 @@
                         <div class="stat-number" id="stat1">0</div>
                         <div class="stat-label">Projects</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number" id="stat2">0</div>
-                        <div class="stat-label">Models Live</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" id="stat3">0</div>
-                        <div class="stat-label">Papers</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" id="stat4">0</div>
-                        <div class="stat-label">Predictions/Day</div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -2986,10 +2974,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting && !countersStarted) {
                     countersStarted = true;
-                    animateNum('stat1', 25, '+');
-                    animateNum('stat2', 15, '+');
-                    animateNum('stat3', 8, '+');
-                    animateNum('stat4', 5, 'M+');
+                    animateNum('stat1', 3, '+');
                 }
             });
         }, { threshold: 0.3 });
